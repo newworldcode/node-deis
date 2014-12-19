@@ -42,6 +42,10 @@ function NodeDeis(configuration) {
     throw ReferenceError('Node Deis configuration requires password property.');
   }
 
+  if (!configuration.hasOwnProperty('appname')) {
+    throw ReferenceError('Node Deis configuration requires appname property.');
+  }
+
   // If we explicitely set it to a secure then we'll https it.
   this.protocol = configuration.secure ? 'https' : 'http';
 
@@ -56,15 +60,19 @@ function NodeDeis(configuration) {
     rejectUnauthorized: false // @TODO: remove this.
   });
 
-  // We don't ever want to set the username or password to anything
+  // We don't ever want to set the username, password or appname to anything
   // set up getters to get the values from the config argument.
   this.__defineGetter__('username', function() {
-    return configuration.username;
+    return configuration.username.toString();
   });
 
   this.__defineGetter__('password', function() {
-    return configuration.password;
-  })
+    return configuration.password.toString();
+  });
+
+  this.__defineGetter__('appname', function() {
+    return configuration.appname.toString();
+  });
 
   // Do some checking on the virtual token property
   // to make sure we're secured.
@@ -78,7 +86,7 @@ function NodeDeis(configuration) {
 
   this.__defineSetter__('token', function(new_value) {
     if (new_value && new_value !== null) {
-      _token = new_value;
+      _token = new_value.toString();
     } else {
       throw TypeError('Cannot set token to null.');
     }
