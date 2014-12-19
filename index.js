@@ -31,15 +31,15 @@ function NodeDeis(configuration) {
 
   // Check we got required config properties.
   if (!configuration.hasOwnProperty('controller')) {
-    throw new ReferenceError('Node Deis configuration requires controller property.');
+    throw ReferenceError('Node Deis configuration requires controller property.');
   }
 
   if (!configuration.hasOwnProperty('username')) {
-    throw new ReferenceError('Node Deis configuration requires username property.');
+    throw ReferenceError('Node Deis configuration requires username property.');
   }
 
   if (!configuration.hasOwnProperty('password')) {
-    throw new ReferenceError('Node Deis configuration requires password property.');
+    throw ReferenceError('Node Deis configuration requires password property.');
   }
 
   // If we explicitely set it to a secure then we'll https it.
@@ -52,7 +52,9 @@ function NodeDeis(configuration) {
   this.version = configuration.version ? 'v' + configuration.version.toString() : 'v1';
 
   // Create a client.
-  this.client = request.newClient(format('%s://%s', this.protocol, this.controller));
+  this.client = request.newClient(format('%s://%s', this.protocol, this.controller), {
+    rejectUnauthorized: false // @TODO: remove this.
+  });
 
   // We don't ever want to set the username or password to anything
   // set up getters to get the values from the config argument.
@@ -78,7 +80,7 @@ function NodeDeis(configuration) {
     if (new_value && new_value !== null) {
       _token = new_value;
     } else {
-      throw new TypeError('Cannot set token to null.');
+      throw TypeError('Cannot set token to null.');
     }
   });
 
