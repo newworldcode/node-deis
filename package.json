@@ -8,18 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dav3-LTD/node-deis.git"
+    "url": "https://github.com/hatchback/node-deis.git"
   },
   "keywords": [
     "deis"
   ],
   "author": "Dave Mackintosh <me@davemackintosh.co.uk> (https://davemackintosh.co.uk)",
-  "license": "Apache 2.0",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dav3-LTD/node-deis/issues"
+    "url": "https://github.com/hatchback/node-deis/issues"
   },
-  "homepage": "https://github.com/Dav3-LTD/node-deis",
+  "homepage": "https://github.com/hatchback/node-deis",
   "devDependencies": {
+    "chai": "^1.10.0",
     "mocha": "^2.0.1"
   },
   "dependencies": {
