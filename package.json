@@ -1,0 +1,22 @@
+{
+  "name": "node-deis",
+  "version": "1.0.0",
+  "description": "Manage Deis from your Node apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -R spec -u tdd --check-leaks --slow 900 $(find tests -name 'test_*.js')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dav3-LTD/node-deis.git"
+  },
+  "keywords": [
+    "deis"
+  ],
+  "author": "Dave Mackintosh <me@davemackintosh.co.uk> (https://davemackintosh.co.uk)",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Dav3-LTD/node-deis/issues"
+  },
+  "homepage": "https://github.com/Dav3-LTD/node-deis"
+}
