@@ -18,6 +18,12 @@ function NodeDeis(configuration) {
   // The auth token is private.
   var _token = null;
 
+  // Get the request json.
+  var request = require('request-json');
+
+  // For formatting strings.
+  var format = require('util').format;
+
   // Check for configuration.
   if (!configuration) {
     throw new ReferenceError('Node Deis requires configuration to work.');
@@ -40,10 +46,13 @@ function NodeDeis(configuration) {
   this.protocol = configuration.secure ? 'https' : 'http';
 
   // Set the controller, we haven't errored if we got here.
-  this.controller = configuration.controller;
+  this.controller = configuration.controller.toString();
 
   // Support future (and previous) versions.
-  this.version = configuration.version ? 'v' + configuration.version : 'v1';
+  this.version = configuration.version ? 'v' + configuration.version.toString() : 'v1';
+
+  // Create a client.
+  this.client = request.newClient(format('%s://%s', this.protocol, this.controller));
 
   // We don't ever want to set the username or password to anything
   // set up getters to get the values from the config argument.
@@ -79,7 +88,7 @@ function NodeDeis(configuration) {
 // If we log in correctly, more methods will be added.
 NodeDeis.prototype = {
   connect: require('./lib/connect'),
-  addDomain: require('./lib/domain').add
+  addDomain: require('./lib/domain').add,
   removeDomain: require('./lib/domain').remove
 };
 
