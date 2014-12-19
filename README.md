@@ -55,35 +55,35 @@ NodeDeis.removeDomain('node-deis-test.yourdomain.com', function(err) {
 
 ### Things still to do
 
-##### Create api for
-[*] logging in
-[*] adding domains
-[*] removing domains
-[ ] logging out
-[ ] registering
-[ ] account cancelation
-[ ] list applications
-[ ] create application
-[ ] destroy application
-[ ] list app details
-[ ] get application logs
-[ ] run remote commands
-[ ] list all containers
-[ ] list containers by type
-[ ] scale containers
-[ ] show app config
-[ ] create app config
-[ ] unset config
-[ ] list app domains
-[ ] list app builds
-[ ] create app build
-[ ] list app releases
-[ ] show release details
-[ ] rollback release
-[ ] list keys
-[ ] add key to user
-[ ] remove key from user
-[ ] list app permissions
-[ ] create application permission
-[ ] remove app permission
-[ ] grant user admin rights
+-  Create api for
+- [*] logging in
+- [*] adding domains
+- [*] removing domains
+- [ ] logging out
+- [ ] registering
+- [ ] account cancelation
+- [ ] list applications
+- [ ] create application
+- [ ] destroy application
+- [ ] list app details
+- [ ] get application logs
+- [ ] run remote commands
+- [ ] list all containers
+- [ ] list containers by type
+- [ ] scale containers
+- [ ] show app config
+- [ ] create app config
+- [ ] unset config
+- [ ] list app domains
+- [ ] list app builds
+- [ ] create app build
+- [ ] list app releases
+- [ ] show release details
+- [ ] rollback release
+- [ ] list keys
+- [ ] add key to user
+- [ ] remove key from user
+- [ ] list app permissions
+- [ ] create application permission
+- [ ] remove app permission
+- [ ] grant user admin rights
