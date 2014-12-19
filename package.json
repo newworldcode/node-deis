@@ -19,9 +19,6 @@
     "url": "https://github.com/Dav3-LTD/node-deis/issues"
   },
   "homepage": "https://github.com/Dav3-LTD/node-deis",
-  "dependencies": {
-    "request": "^2.51.0"
-  },
   "devDependencies": {
     "mocha": "^2.0.1"
   }
