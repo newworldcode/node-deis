@@ -55,7 +55,7 @@ NodeDeis.removeDomain('node-deis-test.yourdomain.com', function(err) {
 
 ### Things still to do
 
--  Create api for
+##### Create api for
 - [x] logging in
 - [x] adding domains
 - [x] removing domains
