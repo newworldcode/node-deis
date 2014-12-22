@@ -59,6 +59,8 @@ NodeDeis.removeDomain('node-deis-test.yourdomain.com', function(err) {
 - [x] logging in
 - [x] adding domains
 - [x] removing domains
+- [x] list app domains
+- [x] get specific domain
 - [ ] logging out
 - [ ] registering
 - [ ] account cancelation
@@ -74,7 +76,6 @@ NodeDeis.removeDomain('node-deis-test.yourdomain.com', function(err) {
 - [ ] show app config
 - [ ] create app config
 - [ ] unset config
-- [ ] list app domains
 - [ ] list app builds
 - [ ] create app build
 - [ ] list app releases
