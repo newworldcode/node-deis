@@ -53,6 +53,27 @@ NodeDeis.removeDomain('node-deis-test.yourdomain.com', function(err) {
 });
 ```
 
+### `NodeDeis.getAllDomains(Function callback);`
+Get all the domains for this application.
+
+```js
+NodeDeis.getAllDomains(function(err, data) {
+    assert.equal(err, null, 'Something bad happened.');
+
+    // do something with the data array.
+});
+```
+### `NodeDeis.getDomain(Function callback);`
+Get a specific domain for this application.
+
+```js
+NodeDeis.getDomain('node-deis-test.yourdomain.com', function(err, domain) {
+    assert.equal(err, null, 'Something bad happened.');
+
+    // do something with the domain object.
+});
+```
+
 ### Things still to do
 
 ##### Create api for
