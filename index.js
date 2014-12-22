@@ -94,12 +94,16 @@ function NodeDeis(configuration) {
 
 }
 
+var domains = require('./lib/domain');
+
 // Add the extra methods.
 // If we log in correctly, more methods will be added.
 NodeDeis.prototype = {
   connect: require('./lib/connect'),
-  addDomain: require('./lib/domain').add,
-  removeDomain: require('./lib/domain').remove
+  addDomain: domains.add,
+  removeDomain: domains.remove,
+  getAllDomains: domains.getAll,
+  getDomain: domains.get
 };
 
 // Export.
