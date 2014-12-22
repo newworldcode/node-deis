@@ -63,7 +63,7 @@ NodeDeis.getAllDomains(function(err, data) {
     // do something with the data array.
 });
 ```
-### `NodeDeis.getDomain(Function callback);`
+### `NodeDeis.getDomain(String domain, Function callback);`
 Get a specific domain for this application.
 
 ```js
