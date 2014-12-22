@@ -1,6 +1,6 @@
 {
   "name": "node-deis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Manage Deis from your Node apps.",
   "main": "index.js",
   "scripts": {
